@@ -3,11 +3,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>candlelight</groupId>
-    <artifactId>joda-converters</artifactId>
+    <artifactId>joda-jpa-converters</artifactId>
     <version>0.1</version>
     <packaging>jar</packaging>
 
-    <name>joda-converters</name>
+    <name>joda-jpa-converters</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
