@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<entity-mappings 
+    xmlns="http://java.sun.com/xml/ns/persistence/orm"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm orm_2_0.xsd"
+    version="2.0">
+    <description>Joda time converter ORM test</description>
+    <package>entity</package>
+     
+    <entity class="candlelight.joda.converters.entity.DateTimeContainingPOJO" access="FIELD">        
+        <table name="dateTimePojo"/>
+        <attributes>
+            <id name="id"/>
+            <basic name="id">
+                <column name="id"/>
+            </basic>
+            <basic name="dateTime">
+                <column name="dateTime"/>
+            </basic>
+        </attributes>
+    </entity>
+    <converter class="candlelight.joda.converts.JodaDateTimeConverter" auto-apply="true"/>
+    <converter class="candlelight.joda.converts.JodaDurationConverter" auto-apply="true"/>
+    <converter class="candlelight.joda.converts.JodaInstantConverter" auto-apply="true"/>
+    <converter class="candlelight.joda.converts.JodaIntervalConverter" auto-apply="true"/>
+    <converter class="candlelight.joda.converts.JodaLocalDateConverter" auto-apply="true"/>
+</entity-mappings>
+
