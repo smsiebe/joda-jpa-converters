@@ -5,29 +5,27 @@
         <exclude-unlisted-classes>false</exclude-unlisted-classes>
         <shared-cache-mode>NONE</shared-cache-mode>
         <properties>
-            <property name="javax.persistence.jdbc.driver" value="org.h2.driver"/>
+            <property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>
             <property name="javax.persistence.jdbc.url" value="jdbc:h2:mem:testdb"/>
             <property name="javax.persistence.jdbc.user" value="sa"/>
             <property name="javax.persistence.jdbc.password" value=""/>
             <property name="eclipselink.ddl-generation" value="create-tables"/>
             <property name="eclipselink.ddl-generation.output-mode" value="database"/>
-            <property name="eclipselink.session.customizer" value="com.dynamicdatasolutions.jpa.eclipselink.UUIDSequence"/>
         </properties>
     </persistence-unit>
     <persistence-unit name="jodaConverterTestORMPU" transaction-type="RESOURCE_LOCAL">
-        <!--<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>-->
-        <provider>org.hibernate.ejb.HibernatePersistence</provider>
-        <mapping-file>orm.xml</mapping-file>
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        <!--<provider>org.hibernate.ejb.HibernatePersistence</provider>-->
+        <mapping-file>META-INF/pojo.xml</mapping-file>
         <exclude-unlisted-classes>true</exclude-unlisted-classes>
         <properties>
             <!-- Start Eclipselink config -->
-            <property name="javax.persistence.jdbc.driver" value="org.h2.driver"/>
+            <property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>
             <property name="javax.persistence.jdbc.url" value="jdbc:h2:mem:testormdb"/>
             <property name="javax.persistence.jdbc.user" value="sa"/>
             <property name="javax.persistence.jdbc.password" value=""/>
             <property name="eclipselink.ddl-generation" value="create-tables"/>
             <property name="eclipselink.ddl-generation.output-mode" value="database"/>
-            <property name="eclipselink.session.customizer" value="com.dynamicdatasolutions.jpa.eclipselink.UUIDSequence"/>
             <!-- End Eclipselink config -->
             
             <!-- Start Hibernate config -->

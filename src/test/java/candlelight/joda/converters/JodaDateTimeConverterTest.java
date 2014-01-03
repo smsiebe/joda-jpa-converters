@@ -79,9 +79,10 @@ public class JodaDateTimeConverterTest {
             if (emf != null) {
                 emf.close();
             }
+            fail(ex.getMessage());
         }
     }
-    
+
     @Test
     public void testPersistEntityORM() {
         EntityManagerFactory emf = null;
@@ -110,6 +111,7 @@ public class JodaDateTimeConverterTest {
             if (emf != null) {
                 emf.close();
             }
+            fail(ex.getMessage());
         }
     }
 }
